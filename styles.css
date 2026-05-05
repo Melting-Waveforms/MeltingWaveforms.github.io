@@ -175,17 +175,17 @@ main {
   right: -2vw;
   top: 50%;
   transform: translateY(-50%);
-  width: 60%;
-  height: 100%;
+  width: 55%;
+  height: 90%;
   background-image: url('header_background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.4;
-  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%),
-              linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 85%, transparent 100%),
-                      linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 35%, black 85%, transparent 100%),
+              linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, black 85%, transparent 100%),
+              linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
   animation: shimmer 4s ease-in-out infinite;
