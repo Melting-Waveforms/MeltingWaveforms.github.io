@@ -182,9 +182,9 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.4;
-  mask-image: linear-gradient(to right, transparent 0%, black 35%, black 85%, transparent 100%),
+  mask-image: linear-gradient(to right, transparent 0%, black 35%, black 70%, transparent 100%),
               linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, black 85%, transparent 100%),
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, black 70%, transparent 100%),
               linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
