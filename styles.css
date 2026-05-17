@@ -379,6 +379,13 @@ main {
   box-shadow: 0 0 30px rgba(150, 255, 50, 0.2);
 }
 
+.artist-ezra {
+  border-color: rgba(232, 232, 240, 0.3);
+}
+.artist-ezra:hover {
+  box-shadow: 0 0 30px rgba(232, 232, 240, 0.2);
+}
+
 .artist-card:hover {
   transform: translateY(-3px);
 }
