@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS1TSNKHJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TZS1TSNKHJ');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — Melting Waveforms</title>
+  <meta name="description" content="The latest news, releases and updates from Melting Waveforms and its artists." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Oxanium:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    .news-page {
+      min-height: 100vh;
+      padding: 0 7vw 80px;
+    }
+
+    .news-header {
+      padding: 80px 0 48px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 3rem;
+    }
+
+    .news-title {
+      font-family: "Oxanium", system-ui, sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      background: linear-gradient(90deg, #ff2fd0, #6b5bff, #23d5ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .news-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 1.4rem;
+      max-width: 820px;
+    }
+
+    .news-card {
+      padding: 1.6rem 1.8rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(145deg, rgba(7,4,24,0.98), rgba(10,7,32,0.98));
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 30px rgba(255, 47, 208, 0.08);
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-3);
+    }
+
+    .news-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .news-headline {
+      font-family: "Oxanium", system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 0.6rem;
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+    }
+
+    .news-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    @media (max-width: 800px) {
+      .news-page {
+        padding-inline: 5vw;
+      }
+
+      .news-header {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Melting Waveforms home">
+      <img src="logo.png" alt="Melting Waveforms logo" class="logo-img" style="height: 42px; width: auto;" />
+      <span>Melting</span> Waveforms
+    </a>
+    <nav class="nav">
+      <a href="index.html#artists">Artists</a>
+      <a href="news.html">News</a>
+      <a href="index.html#sounds">Sounds</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </header>
+
+  <main class="news-page">
+    <div class="news-header">
+      <h1 class="news-title">News</h1>
+      <p class="news-subtitle">The latest releases, updates, and announcements from Melting Waveforms.</p>
+    </div>
+
+    <div class="news-list">
+
+      <!-- Most recent first — copy a news-card block to add new entries -->
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">Spotify</span>
+        </div>
+        <h2 class="news-headline">Freedom by Harland Wexler — Now on Spotify</h2>
+        <p class="news-body">Harland Wexler's latest single is now available on Spotify and major streaming platforms. Find it wherever you listen.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">New Artist</span>
+        </div>
+        <h2 class="news-headline">Lyrae Nova joins Melting Waveforms</h2>
+        <p class="news-body">New York to Los Angeles. Lyrae Nova's debut EP Just Getting Started is now available on SoundCloud. Three songs. All in.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">Album</span>
+        </div>
+        <h2 class="news-headline">Terms & Conditions — Kaelith's second album is complete</h2>
+        <p class="news-body">Fourteen songs. Nobody read the fine print. Kaelith's second album is now available in full on SoundCloud.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">EP</span>
+        </div>
+        <h2 class="news-headline">Before Strange EP — Wren Wyngate</h2>
+        <p class="news-body">Five songs about where she came from before Austin changed everything. Wren Wyngate's debut EP is now complete on SoundCloud.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">EP</span>
+        </div>
+        <h2 class="news-headline">Count What You Have EP — Solano Reid</h2>
+        <p class="news-body">Six songs about gratitude, forgiveness and the quiet radical act of counting what you already have. Now complete on SoundCloud.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">June 2026</span>
+          <span class="news-tag">Collaboration</span>
+        </div>
+        <h2 class="news-headline">Happy Friday — Alaric West & Lyrae Nova</h2>
+        <p class="news-body">The LA duo's third collaboration is here. He wants the couch. She wants the crowd. Same Friday, different plans, same smile.</p>
+      </article>
+
+      <article class="news-card">
+        <div class="news-meta">
+          <span class="news-date">Late June 2026</span>
+          <span class="news-tag">Album</span>
+        </div>
+        <h2 class="news-headline">Maybe Home Is Me — Alaric West debut album</h2>
+        <p class="news-body">Ten songs about cycles, inherited patterns and the long road to finding home in yourself. Alaric West's debut album is complete.</p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Melting Waveforms</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const glow = document.createElement('div');
+    glow.style.cssText = `
+      position: fixed;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(255,47,208,0.12) 0%, rgba(107,91,255,0.07) 40%, transparent 70%);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    `;
+    document.body.appendChild(glow);
+
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+      glow.style.opacity = '1';
+    });
+
+    document.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+    });
+  </script>
+</body>
+</html>
