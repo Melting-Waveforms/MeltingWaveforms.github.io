@@ -46,7 +46,6 @@
       margin: 0;
     }
 
-    /* Two column layout */
     .news-layout {
       display: grid;
       grid-template-columns: 1fr 300px;
@@ -54,7 +53,6 @@
       align-items: start;
     }
 
-    /* Left — news cards */
     .news-list {
       display: grid;
       gap: 1.4rem;
@@ -78,6 +76,7 @@
       align-items: center;
       gap: 1rem;
       margin-bottom: 0.7rem;
+      flex-wrap: wrap;
     }
 
     .news-date {
@@ -97,6 +96,11 @@
       border: 1px solid var(--border-subtle);
     }
 
+    .news-tag.live {
+      color: #99ff00;
+      border-color: rgba(153, 255, 0, 0.4);
+    }
+
     .news-headline {
       font-family: "Oxanium", system-ui, sans-serif;
       font-size: 1.05rem;
@@ -114,7 +118,7 @@
       margin: 0;
     }
 
-    /* Right — sidebar */
+    /* Sidebar */
     .news-sidebar {
       display: flex;
       flex-direction: column;
@@ -140,7 +144,6 @@
       border-bottom: 1px solid var(--border-subtle);
     }
 
-    /* Latest release card */
     .release-cover {
       width: 100%;
       aspect-ratio: 1;
@@ -156,7 +159,7 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #23d5ff;
+      color: #ff6b6b;
       margin: 0 0 0.3rem;
     }
 
@@ -181,7 +184,7 @@
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: #23d5ff;
+      color: #ff6b6b;
       text-decoration: none;
       transition: opacity 0.2s ease;
     }
@@ -190,7 +193,6 @@
       opacity: 0.75;
     }
 
-    /* Previous release — smaller */
     .prev-release {
       padding: 1rem 1.2rem;
       display: flex;
@@ -244,7 +246,6 @@
       color: #b47fff;
     }
 
-    /* Artist links */
     .artist-links {
       padding: 0.6rem 0;
     }
@@ -275,24 +276,26 @@
       font-weight: 500;
     }
 
+    .artist-link-new {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #99ff00;
+      margin-left: auto;
+    }
+
     @media (max-width: 900px) {
       .news-layout {
         grid-template-columns: 1fr;
       }
-
       .news-sidebar {
         position: static;
       }
     }
 
     @media (max-width: 800px) {
-      .news-page {
-        padding-inline: 5vw;
-      }
-
-      .news-header {
-        padding-top: 60px;
-      }
+      .news-page { padding-inline: 5vw; }
+      .news-header { padding-top: 60px; }
     }
   </style>
 </head>
@@ -322,8 +325,64 @@
 
     <div class="news-layout">
 
-      <!-- LEFT — News cards -->
+      <!-- LEFT — News cards, most recent first -->
       <div class="news-list">
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag">EP</span>
+          </div>
+          <h2 class="news-headline">Just Getting Started — Lyrae Nova debut EP complete</h2>
+          <p class="news-body">Three songs. Coral pink hair, designer sunglasses and absolutely no intention of being anything other than exactly herself. Just Getting Started is now complete and available on SoundCloud.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag">Single</span>
+          </div>
+          <h2 class="news-headline">Pink Sheep — Lyrae Nova</h2>
+          <p class="news-body">Lyrae Nova's latest single is now on SoundCloud. She's not the black sheep. She's the pink one. And she's fine with that.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag">Single</span>
+          </div>
+          <h2 class="news-headline">Probably Not — Kaelith</h2>
+          <p class="news-body">Kaelith's latest single is now on SoundCloud. She's looked at the data. She's done pretending the answer is unclear.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag live">Live on Suno</span>
+          </div>
+          <h2 class="news-headline">Rigged — Kaelith</h2>
+          <p class="news-body">The free market was never free for everyone. Kaelith's sharpest social commentary yet is live on Suno now and coming soon to SoundCloud.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag">New Artist</span>
+            <span class="news-tag live">Live on Suno</span>
+          </div>
+          <h2 class="news-headline">Colt Kizmore joins Melting Waveforms</h2>
+          <p class="news-body">The tenth artist on the roster and the thickest accent on the label. Colt Kizmore is a young Austin Texas country electronic artist who drifted in and forgot to leave. His debut single Two Lane Road is live on Suno now and coming soon to SoundCloud.</p>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date">July 2026</span>
+            <span class="news-tag">Collaboration</span>
+            <span class="news-tag live">Live on Suno</span>
+          </div>
+          <h2 class="news-headline">Night Owl — Wren Wyngate & Colt Kizmore</h2>
+          <p class="news-body">Two friends. One late night. Nobody's watching the clock. The debut collaboration between Wren Wyngate and Colt Kizmore is live on Suno now and coming soon to SoundCloud.</p>
+        </article>
 
         <article class="news-card">
           <div class="news-meta">
@@ -349,7 +408,7 @@
             <span class="news-tag">Single</span>
           </div>
           <h2 class="news-headline">Triggered — Sylraen</h2>
-          <p class="news-body">Sylraen's latest single is now on SoundCloud. The uncomfortable honest experience of being set off by something small that connects to something much bigger.</p>
+          <p class="news-body">Sylraen's latest single is now on SoundCloud. The uncomfortable, honest experience of being set off by something small that connects to something much bigger.</p>
         </article>
 
         <article class="news-card">
@@ -358,7 +417,7 @@
             <span class="news-tag">New Artist</span>
           </div>
           <h2 class="news-headline">Lyrae Nova joins Melting Waveforms</h2>
-          <p class="news-body">New York to Los Angeles. Lyrae Nova's debut EP Just Getting Started is now available on SoundCloud. Three songs. All in.</p>
+          <p class="news-body">New York to Los Angeles. Lyrae Nova arrived with coral pink hair and plans on her phone. Her debut EP Just Getting Started is now available on SoundCloud.</p>
         </article>
 
         <article class="news-card">
@@ -366,7 +425,7 @@
             <span class="news-date">June 2026</span>
             <span class="news-tag">Album</span>
           </div>
-          <h2 class="news-headline">Terms & Conditions — Kaelith's second album is complete</h2>
+          <h2 class="news-headline">Terms & Conditions — Kaelith's second album complete</h2>
           <p class="news-body">Fourteen songs. Nobody read the fine print. Kaelith's second album is now available in full on SoundCloud.</p>
         </article>
 
@@ -388,15 +447,6 @@
           <p class="news-body">Six songs about gratitude, forgiveness and the quiet radical act of counting what you already have. Now complete on SoundCloud.</p>
         </article>
 
-        <article class="news-card">
-          <div class="news-meta">
-            <span class="news-date">June 2026</span>
-            <span class="news-tag">Collaboration</span>
-          </div>
-          <h2 class="news-headline">Happy Friday — Alaric West & Lyrae Nova</h2>
-          <p class="news-body">The LA duo's third collaboration is here. He wants the couch. She wants the crowd. Same Friday, different plans, same smile.</p>
-        </article>
-
       </div>
 
       <!-- RIGHT — Sidebar -->
@@ -405,11 +455,11 @@
         <!-- Latest Release -->
         <div class="sidebar-block">
           <p class="sidebar-label">Latest Release</p>
-          <img src="AlaricSOP.jpeg" alt="Slow On Purpose cover art" class="release-cover" />
+          <img src="JUST_GETTING_STARTED__1_.png" alt="Just Getting Started EP cover" class="release-cover" />
           <div class="release-info">
-            <p class="release-artist">Alaric West</p>
-            <p class="release-title">Slow On Purpose</p>
-            <p class="release-date">June 2026 · Single</p>
+            <p class="release-artist">Lyrae Nova</p>
+            <p class="release-title">Pink Sheep</p>
+            <p class="release-date">July 2026 · Single</p>
             <a href="https://soundcloud.com/melting-waveforms" target="_blank" class="release-link">Listen on SoundCloud →</a>
           </div>
         </div>
@@ -418,11 +468,11 @@
         <div class="sidebar-block">
           <p class="sidebar-label">Previous Release</p>
           <div class="prev-release">
-            <img src="sylraen.png" alt="Triggered cover art" class="prev-cover" />
+            <img src="kaelith.png" alt="Probably Not cover" class="prev-cover" />
             <div class="prev-info">
-              <p class="prev-artist">Sylraen</p>
-              <p class="prev-title">Triggered</p>
-              <a href="sylraen.html" class="prev-link">Visit artist →</a>
+              <p class="prev-artist">Kaelith</p>
+              <p class="prev-title">Probably Not</p>
+              <a href="kaelith.html" class="prev-link">Visit artist →</a>
             </div>
           </div>
         </div>
@@ -467,6 +517,11 @@
               <span class="artist-dot" style="background:#ff6b6b;box-shadow:0 0 6px rgba(255,107,107,0.6);"></span>
               <span class="artist-link-name">Lyrae Nova</span>
             </a>
+            <a href="colt.html" class="artist-link-item">
+              <span class="artist-dot" style="background:#00cc44;box-shadow:0 0 6px rgba(0,204,68,0.6);"></span>
+              <span class="artist-link-name">Colt Kizmore</span>
+              <span class="artist-link-new">New</span>
+            </a>
           </div>
         </div>
 
@@ -480,31 +535,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const glow = document.createElement('div');
-    glow.style.cssText = `
-      position: fixed;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(255,47,208,0.12) 0%, rgba(107,91,255,0.07) 40%, transparent 70%);
-      transition: opacity 0.3s ease;
-      opacity: 0;
-    `;
+    glow.style.cssText = `position:fixed;width:320px;height:320px;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,47,208,0.12) 0%,rgba(107,91,255,0.07) 40%,transparent 70%);transition:opacity 0.3s ease;opacity:0;`;
     document.body.appendChild(glow);
-
-    document.addEventListener('mousemove', (e) => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-      glow.style.opacity = '1';
-    });
-
-    document.addEventListener('mouseleave', () => {
-      glow.style.opacity = '0';
-    });
+    document.addEventListener('mousemove',(e)=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';glow.style.opacity='1';});
+    document.addEventListener('mouseleave',()=>{glow.style.opacity='0';});
   </script>
 </body>
 </html>
