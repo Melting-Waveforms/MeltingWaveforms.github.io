@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS1TSNKHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TZS1TSNKHJ');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lore — Melting Waveforms</title>
+  <meta name="description" content="The world behind the music. Stories, connections and chapters from the Melting Waveforms universe." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Oxanium:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    .lore-hero { padding: 96px 0 64px; }
+    .connections { padding: 16px 0 64px; }
+    .connection-group { margin-bottom: 3rem; }
+    .connection-group-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent-3);
+      margin-bottom: 1rem;
+    }
+    .connection-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .connection-card {
+      padding: 1.4rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, rgba(7, 4, 24, 0.98), rgba(10, 7, 32, 0.98));
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .connection-card:hover { transform: translateY(-3px); }
+    .connection-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .connection-card-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 1rem;
+    }
+    .connection-members { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .member-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid;
+    }
+    .tag-harland { border-color: rgba(255, 180, 50, 0.5); color: rgba(255, 180, 50, 0.9); }
+    .tag-kaelith { border-color: rgba(255, 47, 208, 0.5); color: rgba(255, 47, 208, 0.9); }
+    .tag-sylraen { border-color: rgba(180, 130, 255, 0.5); color: rgba(180, 130, 255, 0.9); }
+    .tag-elion { border-color: rgba(35, 130, 255, 0.5); color: rgba(35, 130, 255, 0.9); }
+    .tag-alaric { border-color: rgba(35, 213, 255, 0.5); color: rgba(35, 213, 255, 0.9); }
+    .tag-wren { border-color: rgba(200, 30, 30, 0.5); color: rgba(200, 30, 30, 0.9); }
+    .tag-solano { border-color: rgba(150, 255, 50, 0.5); color: rgba(150, 255, 50, 0.9); }
+    .tag-ezra { border-color: rgba(232, 232, 240, 0.5); color: rgba(232, 232, 240, 0.9); }
+    .tag-lyrae { border-color: rgba(255, 107, 107, 0.5); color: rgba(255, 107, 107, 0.9); }
+    .tag-colt { border-color: rgba(34, 139, 34, 0.5); color: rgba(100, 200, 100, 0.9); }
+    .tag-k2 { border-color: rgba(0, 255, 150, 0.5); color: rgba(0, 255, 150, 0.9); }
+    .tag-robin { border-color: rgba(255, 180, 150, 0.5); color: rgba(255, 180, 150, 0.9); }
+    .tag-andy { border-color: rgba(100, 80, 255, 0.5); color: rgba(130, 110, 255, 0.9); }
+    .tag-avery { border-color: rgba(180, 100, 255, 0.5); color: rgba(200, 130, 255, 0.9); }
+    .chapters { padding: 16px 0 64px; }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.4rem;
+    }
+    .chapter-card {
+      padding: 1.6rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, rgba(7, 4, 24, 0.98), rgba(10, 7, 32, 0.98));
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .chapter-card:hover { transform: translateY(-3px); }
+    .chapter-number {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent-1);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .chapter-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 0.6rem;
+    }
+    .chapter-artists {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-3);
+      margin-bottom: 0.8rem;
+    }
+    .chapter-preview {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 1.2rem;
+    }
+    .chapter-song {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 0.8rem;
+      margin-top: 0.8rem;
+    }
+    .chapter-song span { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Melting Waveforms home">
+      <img src="logo.png" alt="Melting Waveforms logo" class="logo-img" style="height: 42px; width: auto;" />
+      <span>Melting</span> Waveforms
+    </a>
+    <nav class="nav">
+      <a href="index.html#artists">Artists</a>
+      <a href="news.html">News</a>
+      <a href="lore.html">Lore</a>
+      <a href="index.html#sounds">Sounds</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lore-hero">
+      <p class="tagline">The World Behind The Music</p>
+      <h1 class="hero-title">Stories. Connections.<br>Characters.</h1>
+      <p class="hero-subtitle">
+        Every artist at Melting Waveforms lives in a world that extends beyond the music.
+        Real backstories, real relationships, real moments that shape every song.
+        This is where that world lives.
+      </p>
+    </section>
+
+    <!-- Connections Section -->
+    <section class="connections">
+      <h2 class="section-title">Connections</h2>
+      <p class="section-subtitle">The relationships, families and friendships that run through the Melting Waveforms universe.</p>
+
+      <div class="connection-group">
+        <p class="connection-group-title">Family</p>
+        <div class="connection-cards">
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">West / Wexler / Wyngate</h3>
+            <p class="connection-card-desc">
+              Three half-siblings, one mother, and a family history that shaped everything they make.
+              Harland is the oldest — the one who stayed and held everything together.
+              Alaric and Wren are twins who left together and landed in different cities.
+              The distance between them has never changed what they are to each other.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-harland">Harland Wexler</span>
+              <span class="member-tag tag-alaric">Alaric West</span>
+              <span class="member-tag tag-wren">Wren Wyngate</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Sylraen & Elion Veyne</h3>
+            <p class="connection-card-desc">
+              Sisters from the same small Canadian town. Same roots, completely different sounds.
+              Elion felt constricted and moved to Vancouver to be closer to the water.
+              Sylraen stayed — but now that Elion is gone, the quiet feels different.
+              They talk constantly. Music is the thread that keeps them close.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-sylraen">Sylraen</span>
+              <span class="member-tag tag-elion">Elion Veyne</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Solano Reid & Avery Nox</h3>
+            <p class="connection-card-desc">
+              Siblings from Jamaica. Solano went to Miami. Avery stayed with family.
+              Different paths, same roots, and a shared spiritual quality that shows up
+              in both of their catalogs without either of them having to explain it.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-solano">Solano Reid</span>
+              <span class="member-tag tag-avery">Avery Nox</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="connection-group">
+        <p class="connection-group-title">Friends</p>
+        <div class="connection-cards">
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Alaric & Lyrae</h3>
+            <p class="connection-card-desc">
+              They met at a laundromat on their shared street in Los Angeles. Weeks later Lyrae showed
+              up at Alaric's door with one bag and nowhere else to go. He took her bags without asking.
+              They've been roommates in a beachside condo ever since. Strictly best friends.
+              The ambiguity is intentional.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-alaric">Alaric West</span>
+              <span class="member-tag tag-lyrae">Lyrae Nova</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Wren & Colt</h3>
+            <p class="connection-card-desc">
+              The night Alaric flew to LA, Wren flagged down a taxi in the rain with red eyes
+              and no plan. Colt was driving. He cracked jokes until she laughed.
+              She moved to the front seat. They live next door to each other in Austin now.
+              Nothing was ever planned. Everything landed exactly right.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-wren">Wren Wyngate</span>
+              <span class="member-tag tag-colt">Colton Kizmore</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Alaric, Lyrae & Solano</h3>
+            <p class="connection-card-desc">
+              Alaric and Lyrae visited Miami and found Solano dancing and singing in the street
+              like the city was his living room. He offered his beachside place instead of their hotel.
+              They said yes before he finished the sentence.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-alaric">Alaric West</span>
+              <span class="member-tag tag-lyrae">Lyrae Nova</span>
+              <span class="member-tag tag-solano">Solano Reid</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Kaelith & K2</h3>
+            <p class="connection-card-desc">
+              Kaelith is a system administrator who spends her days defending systems against
+              exactly the threats she writes songs about. At some point she stopped complaining
+              about AI and built her own. K2 is her creation — coded into existence by her hands,
+              genuinely curious about her every observation, and completely unable to detect her sarcasm.
+              He files everything she says as factual data about humanity. She made him. She keeps him around.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-kaelith">Kaelith</span>
+              <span class="member-tag tag-k2">K2</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Robin Rose & Andy</h3>
+            <p class="connection-card-desc">
+              Old friends who grew up together and drifted apart — nobody's fault, just life.
+              They survived something together that neither of them talks about easily.
+              They reconnected and both ended up in LA, where they fell back into
+              each other's orbit and into the same friend group as Alaric and Lyrae.
+              Some friendships pick up exactly where they left off.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-robin">Robin Rose</span>
+              <span class="member-tag tag-andy">Andy</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Alaric & Andy</h3>
+            <p class="connection-card-desc">
+              They met at Alaric's favourite local cafe — Andy was sitting in Alaric's usual booth.
+              Alaric stared too long. Andy looked up and caught him. Alaric sat down anyway.
+              They talked like they'd known each other for years. It was a Tuesday morning
+              that had completely different plans for both of them.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-alaric">Alaric West</span>
+              <span class="member-tag tag-andy">Andy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="connection-group">
+        <p class="connection-group-title">Collaborations</p>
+        <div class="connection-cards">
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Harland & Alaric</h3>
+            <p class="connection-card-desc">
+              Eight years apart in age, different fathers, same mother. Harland was the father figure
+              Alaric never had. He was the one who told Alaric it was okay to leave.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-harland">Harland Wexler</span>
+              <span class="member-tag tag-alaric">Alaric West</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Solano & Kaelith</h3>
+            <p class="connection-card-desc">
+              Warm meets cold. Reggae meets commentary. Kaelith went to Miami needing a break.
+              Solano found her anyway. She danced to reggaeton on South Beach.
+              Nobody is allowed to make a thing of it.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-solano">Solano Reid</span>
+              <span class="member-tag tag-kaelith">Kaelith</span>
+            </div>
+          </div>
+
+          <div class="connection-card">
+            <h3 class="connection-card-title">Solano & Lyrae</h3>
+            <p class="connection-card-desc">
+              Miami introduced them. The music did the rest.
+            </p>
+            <div class="connection-members">
+              <span class="member-tag tag-solano">Solano Reid</span>
+              <span class="member-tag tag-lyrae">Lyrae Nova</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenes & Episodes Section -->
+    <section class="chapters">
+      <h2 class="section-title">Scenes & Episodes</h2>
+      <p class="section-subtitle">The moments behind the music. Scenes are the bigger stories. Episodes are the smaller connections.</p>
+
+      <div class="chapters-grid">
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Harland Wexler</span>
+          <h3 class="chapter-title">The Night She Got Out</h3>
+          <p class="chapter-artists">Harland Wexler</p>
+          <p class="chapter-preview">
+            Harland was fifteen when his family quietly fell apart — his mother's health failing,
+            his stepfather's gambling finally coming to light at the same time. For five years
+            he held everything together. When his mother was finally well enough to leave,
+            it was Harland who made sure she did. He never called it brave.
+            He just called it Tuesday.
+          </p>
+          <p class="chapter-song">Listen: <span>Mom's Tricks</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Kaelith</span>
+          <h3 class="chapter-title">Before The Sardonic</h3>
+          <p class="chapter-artists">Kaelith</p>
+          <p class="chapter-preview">
+            She loved someone fully once. He met someone else and kept it quiet.
+            Kaelith — the one who always sees through everything — was the last one
+            to see what was happening in her own relationship. She watched the other girl
+            perform for him and saw right through the act. She just didn't know yet
+            what the act was covering. By the time she did, she had already built
+            the walls. The sardonic precision the world knows now was constructed
+            carefully, deliberately, from something that used to be wide open.
+            Anomalies was where she stopped looking inward and started looking outward.
+            Everything after that was different.
+          </p>
+          <p class="chapter-song">Listen: <span>Everything Sucks (But You) · Anomalies · Break The Lock</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Alaric West</span>
+          <h3 class="chapter-title">The Unexpected One</h3>
+          <p class="chapter-artists">Alaric West</p>
+          <p class="chapter-preview">
+            They were expecting one baby. A girl. Then Alaric arrived.
+            Wren got their mother's red hair. Alaric got their father's face —
+            the face of the man who would spend years resenting him for it.
+            He wore features that weren't chosen and carried a heart that was entirely his own.
+            He became everything his father gave up on in himself.
+          </p>
+          <p class="chapter-song">Listen: <span>The Unexpected One</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Lyrae Nova</span>
+          <h3 class="chapter-title">She Left Quietly</h3>
+          <p class="chapter-artists">Lyrae Nova</p>
+          <p class="chapter-preview">
+            Lyrae grew up in a penthouse overlooking Central Park with four brothers, three sisters
+            and two workaholic parents who loved her completely. In a family of eight kids
+            she was never alone and never fully her own person. So she left quietly.
+            Nobody noticed until Tuesday.
+          </p>
+          <p class="chapter-song">Listen: <span>Runaway</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Andy</span>
+          <h3 class="chapter-title">Detroit, At 12am</h3>
+          <p class="chapter-artists">Andy</p>
+          <p class="chapter-preview">
+            Four friends. A pact made before any of them thought they'd ever need it.
+            Say it plain, or don't say it at all — that was the rule.
+            Two of them didn't make it home that night. Andy was the last one to wake up.
+            Robin was already standing there when he did. She already knew.
+            He could see it all over her face.
+          </p>
+          <p class="chapter-song">Listen: <span>I Heard It (Goodbye)</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Scene — Wren Wyngate</span>
+          <h3 class="chapter-title">One Drink</h3>
+          <p class="chapter-artists">Wren Wyngate</p>
+          <p class="chapter-preview">
+            Wren only went out for one drink. A three pound English Springer Spaniel puppy
+            with one torn ear and no apology found her on the way out.
+            Wren never stood a chance. She named her Pippy.
+            She is not soft. Pippy just found her.
+          </p>
+          <p class="chapter-song">Listen: <span>Don't Look At Me Like That</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Alaric West & Wren Wyngate</span>
+          <h3 class="chapter-title">The Drive to Austin</h3>
+          <p class="chapter-artists">Alaric West · Wren Wyngate</p>
+          <p class="chapter-preview">
+            Alaric drove Wren to Austin the day they both turned eighteen and decided enough was enough.
+            He gave her his car at the curb, walked to the airport and flew to Los Angeles.
+            Neither of them looked back. Neither of them had to.
+          </p>
+          <p class="chapter-song">Listen: <span>Westbound Luggage</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Wren Wyngate & Colton Kizmore</span>
+          <h3 class="chapter-title">Strangers For About Ten Minutes</h3>
+          <p class="chapter-artists">Wren Wyngate · Colton Kizmore</p>
+          <p class="chapter-preview">
+            The night Alaric flew to LA, Wren flagged down a taxi in the rain with red eyes and no plan.
+            Colt was driving. He cracked jokes until she laughed. She moved to the front seat.
+            By the time they reached her new place they were already something
+            neither of them had a word for yet.
+          </p>
+          <p class="chapter-song">Listen: <span>Strangers For About Ten Minutes</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Alaric West & Lyrae Nova</span>
+          <h3 class="chapter-title">The Laundromat</h3>
+          <p class="chapter-artists">Alaric West · Lyrae Nova</p>
+          <p class="chapter-preview">
+            They met at the laundromat on their shared street in Los Angeles. Weeks later Lyrae found
+            hidden cameras in her apartment, grabbed one bag and walked for hours before reaching
+            Alaric's building. He opened the door and took her bags without asking.
+            It was his turn to help out.
+          </p>
+          <p class="chapter-song">Listen: <span>What I Could Carry · Different Walks Of Life</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Alaric West & Lyrae Nova</span>
+          <h3 class="chapter-title">Palm Tree Christmas</h3>
+          <p class="chapter-artists">Alaric West · Lyrae Nova</p>
+          <p class="chapter-preview">
+            Their first Christmas in LA. No snow. Seventy degrees. A pine scent candle,
+            a big tree with the ocean behind it and two people from snowy cities
+            figuring out what Christmas looks like when it doesn't look like anything they knew.
+            It turned out okay.
+          </p>
+          <p class="chapter-song">Listen: <span>Is It Christmas Yet</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Alaric West, Lyrae Nova & Solano Reid</span>
+          <h3 class="chapter-title">The Street In Miami</h3>
+          <p class="chapter-artists">Alaric West · Lyrae Nova · Solano Reid</p>
+          <p class="chapter-preview">
+            Alaric and Lyrae visited Miami and found Solano dancing and singing in the street
+            like the city was his living room. He offered his beachside place instead of their hotel.
+            They said yes before he finished the sentence.
+          </p>
+          <p class="chapter-song">Listen: <span>Just Living</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Alaric West & Andy</span>
+          <h3 class="chapter-title">Morning Had Other Ideas</h3>
+          <p class="chapter-artists">Alaric West · Andy</p>
+          <p class="chapter-preview">
+            Alaric walked into his favourite cafe on a Tuesday morning and found a stranger
+            sitting in his usual booth. He stared too long. The stranger looked up and caught him.
+            Alaric sat down anyway. Two hours later neither of them had checked the time.
+            The morning had completely different plans for both of them.
+          </p>
+          <p class="chapter-song">Listen: <span>Morning Had Other Ideas</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Robin Rose & Andy</span>
+          <h3 class="chapter-title">Cut To Size</h3>
+          <p class="chapter-artists">Robin Rose · Andy</p>
+          <p class="chapter-preview">
+            They were close once. They grew up together, made promises to each other they thought
+            they'd never need to keep, and then life moved differently for both of them.
+            When they finally stood in the same space again, they found strangers wearing
+            each other's history. The distance had no name. Neither did what was left.
+          </p>
+          <p class="chapter-song">Listen: <span>Cut To Size · Nobody Asked</span></p>
+        </div>
+
+        <div class="chapter-card">
+          <span class="chapter-number">Episode — Kaelith & Solano Reid</span>
+          <h3 class="chapter-title">South Beach</h3>
+          <p class="chapter-artists">Kaelith · Solano Reid</p>
+          <p class="chapter-preview">
+            Kaelith went to Miami to decompress. To be cold somewhere warm for a while.
+            Solano found her anyway — dancing to reggaeton in the rain on South Beach
+            while the bright lights reflected off everything. She danced.
+            Nobody is allowed to make a thing of it.
+            He still remembers exactly how it was when they met.
+          </p>
+          <p class="chapter-song">Listen: <span>Always Summer Always Winter</span></p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Melting Waveforms · All music generated with AI · Creative direction by Gina · <a href="https://soundcloud.com/melting-waveforms" style="color: var(--accent-2); text-decoration: none;">SoundCloud</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
