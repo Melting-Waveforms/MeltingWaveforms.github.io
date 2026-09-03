@@ -357,6 +357,24 @@ main {
 .artist-lyrae { border-color: rgba(255, 107, 107, 0.3); }
 .artist-lyrae:hover { box-shadow: 0 0 30px rgba(255, 107, 107, 0.2); }
 
+.artist-colt { border-color: rgba(100, 200, 100, 0.3); }
+.artist-colt:hover { box-shadow: 0 0 30px rgba(100, 200, 100, 0.2); }
+
+.artist-andy { border-color: rgba(128, 112, 255, 0.3); }
+.artist-andy:hover { box-shadow: 0 0 30px rgba(128, 112, 255, 0.2); }
+
+.artist-avery { border-color: rgba(200, 126, 255, 0.3); }
+.artist-avery:hover { box-shadow: 0 0 30px rgba(200, 126, 255, 0.2); }
+
+.artist-piper { border-color: rgba(255, 220, 50, 0.3); }
+.artist-piper:hover { box-shadow: 0 0 30px rgba(255, 220, 50, 0.2); }
+
+.artist-robin { border-color: rgba(255, 180, 150, 0.3); }
+.artist-robin:hover { box-shadow: 0 0 30px rgba(255, 180, 150, 0.2); }
+
+.artist-k2 { border-color: rgba(0, 255, 150, 0.3); }
+.artist-k2:hover { box-shadow: 0 0 30px rgba(0, 255, 150, 0.2); }
+
 .artist-card:hover {
   transform: translateY(-3px);
 }
