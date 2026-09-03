@@ -2,21 +2,42 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS1TSNKHJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TZS1TSNKHJ');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS1TSNKHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TZS1TSNKHJ');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melting Waveforms</title>
-  <meta name="description" content="Melting Waveforms exists somewhere between neon and static — a fictional(AI) label housing artists who sound like real life feels. Electronic at the core, human at the heart." />
+  <meta name="description" content="Melting Waveforms exists somewhere between neon and static — a fictional AI label housing artists who sound like real life feels. Electronic at the core, human at the heart." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Oxanium:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    .artist-card.unreleased {
+      opacity: 0.45;
+      filter: grayscale(0.6);
+      cursor: default;
+      pointer-events: none;
+    }
+    .artist-card.unreleased .unreleased-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+    }
+    .unreleased-badge { display: none; }
+    .artist-card.unreleased .unreleased-badge { display: inline-block; }
+  </style>
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -31,6 +52,7 @@
     <nav class="nav">
       <a href="#artists">Artists</a>
       <a href="news.html">News</a>
+      <a href="lore.html">Lore</a>
       <a href="#sounds">Sounds</a>
       <a href="#about">About</a>
     </nav>
@@ -39,11 +61,12 @@
   <main>
     <section class="hero" id="top">
       <div class="hero-content">
-        <p class="tagline">Synthwave • Synthpop • EDM</p>
+        <p class="tagline">Synthwave • Synthpop • EDM • And More</p>
         <h1 class="hero-title">Fictional artists. <br>Genuine feels.</h1>
         <p class="hero-subtitle">
           Melting Waveforms is a neon label for AI music, where electric energy,
           cinematic emotion, modern twists and digital storytelling collide.
+          15 artists. One universe.
         </p>
         <div class="hero-cta">
           <a class="btn primary" href="#artists">Meet the artists</a>
@@ -53,16 +76,16 @@
     </section>
 
     <section class="artists" id="artists">
-      <h2 class="section-title">AI Artists</h2>
+      <h2 class="section-title">The Artists</h2>
       <p class="section-subtitle">
-        Nine personas, one shared pulse of EDM, synthwave, and synthpop. Still growing...
+        15 personas. Synthwave, synthpop, EDM, reggae, country, K-pop, jazz, indie rock and more. Still growing.
       </p>
 
       <a href="harland.html" style="text-decoration: none; color: inherit;">
         <article class="artist-card artist-harland">
           <h3>Harland Wexler</h3>
-          <p class="artist-tag">Warm amber / gold</p>
-          <p class="artist-desc">Grounded indie Americana country-EDM. Warm, nostalgic, reflective storytelling about love, class, and modern life.</p>
+          <p class="artist-tag">Warm amber</p>
+          <p class="artist-desc">Grounded indie Americana country-EDM. Warm, nostalgic, reflective storytelling about love, family, and modern life.</p>
           <p class="artist-meta">Debut album: <strong>Halfway Human</strong></p>
         </article>
       </a>
@@ -71,8 +94,8 @@
         <article class="artist-card artist-kaelith">
           <h3>Kaelith</h3>
           <p class="artist-tag">Electric magenta</p>
-          <p class="artist-desc">Sharp, dark, sarcastic alt-electronic pop with social commentary and bite.</p>
-          <p class="artist-meta">Second album: <strong>Terms & Conditions</strong></p>
+          <p class="artist-desc">Sharp, dark, sardonic alt-electronic pop with social commentary and bite. She noticed. She always notices.</p>
+          <p class="artist-meta">Latest album: <strong>Amendments</strong></p>
         </article>
       </a>
 
@@ -80,7 +103,7 @@
         <article class="artist-card artist-sylraen">
           <h3>Sylraen</h3>
           <p class="artist-tag">Soft lavender</p>
-          <p class="artist-desc">Dreamy, edgy atmospheric pop with shimmering textures and a nocturnal mood.</p>
+          <p class="artist-desc">Dreamy, edgy atmospheric pop with shimmering textures and a nocturnal mood. You feel it at 3am and don't know why.</p>
           <p class="artist-meta">Debut album: <strong>Pretty Ashes In The Dark</strong></p>
         </article>
       </a>
@@ -89,7 +112,7 @@
         <article class="artist-card artist-elion">
           <h3>Elion Veyne</h3>
           <p class="artist-tag">Deep cobalt blue</p>
-          <p class="artist-desc">Cinematic, dramatic emotional pop with powerful female vocals and intense longing.</p>
+          <p class="artist-desc">Cinematic, dramatic emotional pop with powerful female vocals and intense longing. She doesn't fill a room. She haunts it.</p>
           <p class="artist-meta">Debut album: <strong>The Weight of Loving You</strong></p>
         </article>
       </a>
@@ -98,7 +121,7 @@
         <article class="artist-card artist-alaric">
           <h3>Alaric West</h3>
           <p class="artist-tag">Teal / cyan</p>
-          <p class="artist-desc">High male vocal, emotionally raw synthwave-soaked artist about cycles, heartbreak, and social observation.</p>
+          <p class="artist-desc">Emotionally raw synthwave from Los Angeles. Tender, honest and impossible to look away from. You feel it in your chest before you understand it.</p>
           <p class="artist-meta">Debut album: <strong>Maybe Home Is Me</strong></p>
         </article>
       </a>
@@ -138,6 +161,58 @@
           <p class="artist-meta">Debut EP: <strong>Just Getting Started</strong></p>
         </article>
       </a>
+
+      <a href="colt.html" style="text-decoration: none; color: inherit;">
+        <article class="artist-card artist-colt">
+          <h3>Colton Kizmore</h3>
+          <p class="artist-tag">Neon forest green</p>
+          <p class="artist-desc">Warm country electronic from Austin, Texas. Dry humor, unhurried energy, and a sound that feels like a drive you didn't plan to take.</p>
+          <p class="artist-meta">Debut single: <strong>Two Lane Road</strong></p>
+        </article>
+      </a>
+
+      <article class="artist-card artist-andy unreleased">
+        <h3>Andy</h3>
+        <p class="artist-tag">Neon indigo</p>
+        <p class="artist-desc">Post punk indie rock electronic from Los Angeles. Deep, low, and carrying something heavy. The National adjacent. Never overwrought.</p>
+        <p class="artist-meta">Coming soon</p>
+        <span class="unreleased-badge">Coming Soon</span>
+      </article>
+
+      <a href="avery.html" style="text-decoration: none; color: inherit;">
+        <article class="artist-card artist-avery">
+          <h3>Avery Nox</h3>
+          <p class="artist-tag">Neon amethyst</p>
+          <p class="artist-desc">Reggae meets art pop meets shoegaze meets progressive rock from Jamaica. Spiritual, otherworldly, and unlike anything else on the roster.</p>
+          <p class="artist-meta">Debut single: <strong>Glass Between Hours</strong></p>
+        </article>
+      </a>
+
+      <a href="piper.html" style="text-decoration: none; color: inherit;">
+        <article class="artist-card artist-piper">
+          <h3>Piper Jorin</h3>
+          <p class="artist-tag">Bright yellow</p>
+          <p class="artist-desc">Pop R&B from Los Angeles. Born there, knows it like nobody else. Warm, confident and specifically her own person. She chose ordinary on purpose.</p>
+          <p class="artist-meta">Debut single: <strong>On Purpose</strong></p>
+        </article>
+      </a>
+
+      <article class="artist-card artist-robin unreleased">
+        <h3>Robin Rose</h3>
+        <p class="artist-tag">Neon rose gold</p>
+        <p class="artist-desc">Post punk indie rock electronic. Warm but grounded, slightly rough around the edges. Old friends with Andy. Now in LA.</p>
+        <p class="artist-meta">Coming soon</p>
+        <span class="unreleased-badge">Coming Soon</span>
+      </article>
+
+      <article class="artist-card artist-k2 unreleased">
+        <h3>K2</h3>
+        <p class="artist-tag">Bioluminescent green</p>
+        <p class="artist-desc">Owl City adjacent dreamy whimsical electronic pop. Kaelith's personal robot. Genuinely curious about humanity. Files everything.</p>
+        <p class="artist-meta">Coming soon</p>
+        <span class="unreleased-badge">Coming Soon</span>
+      </article>
+
     </section>
 
     <section class="announcements" id="news">
@@ -147,27 +222,33 @@
         <div class="announcements-list">
 
           <article class="announcement-card">
-            <span class="announcement-date">June 2026</span>
-            <h3 class="announcement-headline">Lyrae Nova joins Melting Waveforms</h3>
-            <p class="announcement-body">New York to Los Angeles. Lyrae Nova's debut EP Just Getting Started is now available on SoundCloud. Three songs. All in.</p>
+            <span class="announcement-date">2026</span>
+            <h3 class="announcement-headline">The roster keeps growing</h3>
+            <p class="announcement-body">Colton Kizmore, Andy, Avery Nox and more have joined the Melting Waveforms universe. 15 artists and counting.</p>
           </article>
 
           <article class="announcement-card">
-            <span class="announcement-date">June 2026</span>
-            <h3 class="announcement-headline">Terms & Conditions — Kaelith's second album is complete</h3>
-            <p class="announcement-body">Fourteen songs. Nobody read the fine print. Kaelith's second album is now available in full on SoundCloud.</p>
+            <span class="announcement-date">2026</span>
+            <h3 class="announcement-headline">Freedom by Harland Wexler — Now on Spotify</h3>
+            <p class="announcement-body">Harland Wexler's single is now available on Spotify and major streaming platforms. Find it wherever you listen.</p>
           </article>
 
           <article class="announcement-card">
-            <span class="announcement-date">June 2026</span>
+            <span class="announcement-date">2026</span>
+            <h3 class="announcement-headline">Amendments — Kaelith's third album is complete</h3>
+            <p class="announcement-body">Fourteen songs. She's still watching. Kaelith's third album is now available on SoundCloud.</p>
+          </article>
+
+          <article class="announcement-card">
+            <span class="announcement-date">2026</span>
+            <h3 class="announcement-headline">Maybe Home Is Me — Alaric West's debut album</h3>
+            <p class="announcement-body">Ten songs about leaving, arriving, and figuring out what home means when you build it yourself. Now complete on SoundCloud.</p>
+          </article>
+
+          <article class="announcement-card">
+            <span class="announcement-date">2026</span>
             <h3 class="announcement-headline">Before Strange EP — Wren Wyngate</h3>
             <p class="announcement-body">Five songs about where she came from before Austin changed everything. Wren Wyngate's debut EP is now complete on SoundCloud.</p>
-          </article>
-
-          <article class="announcement-card">
-            <span class="announcement-date">June 2026</span>
-            <h3 class="announcement-headline">Count What You Have EP — Solano Reid</h3>
-            <p class="announcement-body">Six songs about gratitude, forgiveness and the quiet radical act of counting what you already have. Now complete on SoundCloud.</p>
           </article>
 
         </div>
@@ -180,11 +261,11 @@
       <div class="sounds-layout">
         <div class="sounds-panel">
           <h3>Listen</h3>
-          <p>Nine artists. One universe. All on SoundCloud.</p>
+          <p>15 artists. One universe. All on SoundCloud.</p>
           <a href="https://soundcloud.com/melting-waveforms" target="_blank" class="btn primary">Listen on SoundCloud →</a>
         </div>
         <div class="link-list">
-          <h3>Artist Links</h3>
+          <h3>Artist Pages</h3>
           <ul>
             <li><span>Harland Wexler</span> <a href="harland.html">Visit page</a></li>
             <li><span>Kaelith</span> <a href="kaelith.html">Visit page</a></li>
@@ -195,6 +276,11 @@
             <li><span>Solano Reid</span> <a href="solano.html">Visit page</a></li>
             <li><span>Ezra Bazz</span> <a href="ezra.html">Visit page</a></li>
             <li><span>Lyrae Nova</span> <a href="lyrae.html">Visit page</a></li>
+            <li><span>Colton Kizmore</span> <a href="colt.html">Visit page</a></li>
+            <li><span>Andy</span> <a href="andy.html">Visit page</a></li>
+            <li><span>Avery Nox</span> <a href="avery.html">Visit page</a></li>
+            <li><span>Robin Rose</span> <em style="color: var(--muted); font-size: 0.85em;">Coming soon</em></li>
+            <li><span>K2</span> <em style="color: var(--muted); font-size: 0.85em;">Coming soon</em></li>
           </ul>
         </div>
       </div>
@@ -203,13 +289,13 @@
     <section class="about" id="about">
       <h2 class="section-title">About Melting Waveforms</h2>
       <p class="section-subtitle">A label home for AI-generated music built to feel cinematic, modern, and alive.</p>
-      <p class="about-text">Melting Waveforms is an evolving label concept where AI voices, neon visuals, and curated songcraft meet. Each artist has a distinct color identity, but they all share a foundation of EDM, synthwave, and synthpop.</p>
-      <p class="about-text">Every sound starts with a human spark, an overheard phrase, a real feeling, a moment worth remembering. AI brings it to life. The result is something that sounds like real life feels.</p>
+      <p class="about-text">Melting Waveforms is an evolving label concept where AI voices, neon visuals, and curated songcraft meet. 14 artists. Every one with their own sound, backstory, visual identity and emotional world.</p>
+      <p class="about-text">Every sound starts with a human spark — an overheard phrase, a real feeling, a moment worth remembering. The AI generates raw material. Every lyric, every creative decision, every character is shaped by a human creative director. The result is something that sounds like real life feels.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Melting Waveforms</p>
+    <p>© <span id="year"></span> Melting Waveforms · All music generated with AI · Creative direction by Gina · <a href="https://soundcloud.com/melting-waveforms" style="color: var(--accent-2); text-decoration: none;">SoundCloud</a></p>
   </footer>
 
   <script>
